@@ -1,0 +1,484 @@
+{
+  "packs": [
+    {
+      "id": "Trap",
+      "title": "Trap",
+      "genre": "TRAP",
+      "cover": "assets/img/cover-Trap.jpg",
+      "description": "Auto-imported from folder: Trap",
+      "samples": [
+        {
+          "title": "Coeur Froid",
+          "file": "assets/audio/Trap/Coeur%20Froid.wav"
+        },
+        {
+          "title": "GOYARD GOYARD GOYARD ",
+          "file": "assets/audio/Trap/GOYARD%20GOYARD%20GOYARD%20.wav"
+        },
+        {
+          "title": "Hermes j'avance v1 ",
+          "file": "assets/audio/Trap/Hermes%20j%27avance%20v1%20.wav"
+        },
+        {
+          "title": "Hermes j'avance v2",
+          "file": "assets/audio/Trap/Hermes%20j%27avance%20v2.wav"
+        },
+        {
+          "title": "Je suis la rue autrement",
+          "file": "assets/audio/Trap/Je%20suis%20la%20rue%20autrement.wav"
+        }
+      ]
+    },
+    {
+      "id": "afro-fr",
+      "title": "Afro Fr",
+      "genre": "AFRO FR",
+      "cover": "assets/img/cover-afro-fr.jpg",
+      "description": "Auto-imported from folder: afro-fr",
+      "samples": [
+        {
+          "title": "- Jte le laisse la ",
+          "file": "assets/audio/afro-fr/-%20Jte%20le%20laisse%20la%20.wav"
+        },
+        {
+          "title": "Belene Corée",
+          "file": "assets/audio/afro-fr/Belene%20Cor%C3%A9e.wav"
+        },
+        {
+          "title": "Belle histoire ",
+          "file": "assets/audio/afro-fr/Belle%20histoire%20.wav"
+        },
+        {
+          "title": "C'etait Simple ",
+          "file": "assets/audio/afro-fr/C%27etait%20Simple%20.wav"
+        },
+        {
+          "title": "Coréen Afro Imasitumo",
+          "file": "assets/audio/afro-fr/Cor%C3%A9en%20Afro%20Imasitumo.wav"
+        },
+        {
+          "title": "DRAMA QUEEN",
+          "file": "assets/audio/afro-fr/DRAMA%20QUEEN.wav"
+        },
+        {
+          "title": "Dali Dali",
+          "file": "assets/audio/afro-fr/Dali%20Dali.mp3"
+        },
+        {
+          "title": "Drama Queen v2",
+          "file": "assets/audio/afro-fr/Drama%20Queen%20v2.wav"
+        },
+        {
+          "title": "J'arrivais pas à partir",
+          "file": "assets/audio/afro-fr/J%27arrivais%20pas%20%C3%A0%20partir.wav"
+        },
+        {
+          "title": "Jamais Assez",
+          "file": "assets/audio/afro-fr/Jamais%20Assez.wav"
+        },
+        {
+          "title": "Je me suis perdue en toi ",
+          "file": "assets/audio/afro-fr/Je%20me%20suis%20perdue%20en%20toi%20.wav"
+        },
+        {
+          "title": "Je me suis perdue en toi v2",
+          "file": "assets/audio/afro-fr/Je%20me%20suis%20perdue%20en%20toi%20v2.wav"
+        },
+        {
+          "title": "Juste un flirt ",
+          "file": "assets/audio/afro-fr/Juste%20un%20flirt%20.wav"
+        },
+        {
+          "title": "Mayélé",
+          "file": "assets/audio/afro-fr/May%C3%A9l%C3%A9.wav"
+        },
+        {
+          "title": "Oublies moi ",
+          "file": "assets/audio/afro-fr/Oublies%20moi%20.mp3"
+        },
+        {
+          "title": "Perdone (esp) ",
+          "file": "assets/audio/afro-fr/Perdone%20%28esp%29%20.mp3"
+        },
+        {
+          "title": "Trop de feeling",
+          "file": "assets/audio/afro-fr/Trop%20de%20feeling.wav"
+        },
+        {
+          "title": "Trop tard ",
+          "file": "assets/audio/afro-fr/Trop%20tard%20.mp3"
+        },
+        {
+          "title": "Tu etais l'interdit",
+          "file": "assets/audio/afro-fr/Tu%20etais%20l%27interdit.wav"
+        },
+        {
+          "title": "Viens on part ",
+          "file": "assets/audio/afro-fr/Viens%20on%20part%20.wav"
+        },
+        {
+          "title": "shuk shuk  (1)",
+          "file": "assets/audio/afro-fr/shuk%20shuk%20%20%281%29.wav"
+        },
+        {
+          "title": "vanco type afro house",
+          "file": "assets/audio/afro-fr/vanco%20type%20afro%20house.wav"
+        }
+      ]
+    },
+    {
+      "id": "kpop",
+      "title": "Kpop",
+      "genre": "KPOP",
+      "cover": "assets/img/cover-kpop.jpg",
+      "description": "Auto-imported from folder: kpop",
+      "samples": [
+        {
+          "title": "Burn Kpop",
+          "file": "assets/audio/kpop/Burn%20Kpop.wav"
+        },
+        {
+          "title": "Iam Still Here Kpop ( TUBE )",
+          "file": "assets/audio/kpop/Iam%20Still%20Here%20Kpop%20%28%20TUBE%20%29.wav"
+        },
+        {
+          "title": "K POP DARK ",
+          "file": "assets/audio/kpop/K%20POP%20DARK%20.wav"
+        },
+        {
+          "title": "KOP 1",
+          "file": "assets/audio/kpop/KOP%201.wav"
+        },
+        {
+          "title": "KOPP I DONT WANT YOUR LOVE 4 XMAS BETU",
+          "file": "assets/audio/kpop/KOPP%20I%20DONT%20WANT%20YOUR%20LOVE%204%20XMAS%20BETU.wav"
+        },
+        {
+          "title": "KPOP BALADE BETU HOMME FEMME",
+          "file": "assets/audio/kpop/KPOP%20BALADE%20BETU%20HOMME%20FEMME.wav"
+        },
+        {
+          "title": "KPOP BALADE DOUCE MAN ",
+          "file": "assets/audio/kpop/KPOP%20BALADE%20DOUCE%20MAN%20.wav"
+        },
+        {
+          "title": "KPOP BETU DARK 2",
+          "file": "assets/audio/kpop/KPOP%20BETU%20DARK%202.wav"
+        },
+        {
+          "title": "KPOP BETU LA MI DO MI ",
+          "file": "assets/audio/kpop/KPOP%20BETU%20LA%20MI%20DO%20MI%20.wav"
+        },
+        {
+          "title": "KPOP DARKE BETU ",
+          "file": "assets/audio/kpop/KPOP%20DARKE%20BETU%20.wav"
+        },
+        {
+          "title": "KPOP LMAO ONE LIDE ",
+          "file": "assets/audio/kpop/KPOP%20LMAO%20ONE%20LIDE%20.wav"
+        },
+        {
+          "title": "Loose Control Kpop ( TUBE )",
+          "file": "assets/audio/kpop/Loose%20Control%20Kpop%20%28%20TUBE%20%29.wav"
+        },
+        {
+          "title": "Love is Always Slow Kpop ( TUBE Anime )",
+          "file": "assets/audio/kpop/Love%20is%20Always%20Slow%20Kpop%20%28%20TUBE%20Anime%20%29.wav"
+        },
+        {
+          "title": "No Fear No more Kpop ( TUBE )",
+          "file": "assets/audio/kpop/No%20Fear%20No%20more%20Kpop%20%28%20TUBE%20%29.wav"
+        },
+        {
+          "title": "Turn it Up  Kpop ( TUBE )",
+          "file": "assets/audio/kpop/Turn%20it%20Up%20%20Kpop%20%28%20TUBE%20%29.wav"
+        }
+      ]
+    },
+    {
+      "id": "kpop-xmas",
+      "title": "Kpop Xmas",
+      "genre": "KPOP XMAS",
+      "cover": "assets/img/cover-kpop-xmas.jpg",
+      "description": "Auto-imported from folder: kpop-xmas",
+      "samples": [
+        {
+          "title": "KPOP - All I Want for Christmas Is You  V2",
+          "file": "assets/audio/kpop-xmas/KPOP%20-%20All%20I%20Want%20for%20Christmas%20Is%20You%20%20V2.wav"
+        },
+        {
+          "title": "KPOP - All I Want for Christmas Is You ",
+          "file": "assets/audio/kpop-xmas/KPOP%20-%20All%20I%20Want%20for%20Christmas%20Is%20You%20.wav"
+        },
+        {
+          "title": "KPOP NOEL Jingle bells, jingle bells (징글벨 징글벨)-1",
+          "file": "assets/audio/kpop-xmas/KPOP%20NOEL%20Jingle%20bells%2C%20jingle%20bells%20%28%EC%A7%95%EA%B8%80%EB%B2%A8%20%EC%A7%95%EA%B8%80%EB%B2%A8%29-1.wav"
+        },
+        {
+          "title": "KPOP NOEL LALA LA LALA ",
+          "file": "assets/audio/kpop-xmas/KPOP%20NOEL%20LALA%20LA%20LALA%20.wav"
+        },
+        {
+          "title": "KPOP NOEL LET IT SNOW V1",
+          "file": "assets/audio/kpop-xmas/KPOP%20NOEL%20LET%20IT%20SNOW%20V1.wav"
+        },
+        {
+          "title": "KPOP NOEL LET IT SNOW",
+          "file": "assets/audio/kpop-xmas/KPOP%20NOEL%20LET%20IT%20SNOW.wav"
+        },
+        {
+          "title": "KPOP NOEL OH XMAS THREE",
+          "file": "assets/audio/kpop-xmas/KPOP%20NOEL%20OH%20XMAS%20THREE.wav"
+        },
+        {
+          "title": "KPOP NOEL XMAS TREE 2",
+          "file": "assets/audio/kpop-xmas/KPOP%20NOEL%20XMAS%20TREE%202.wav"
+        },
+        {
+          "title": "We Wish You a Merry XMAS",
+          "file": "assets/audio/kpop-xmas/We%20Wish%20You%20a%20Merry%20XMAS.wav"
+        }
+      ]
+    },
+    {
+      "id": "phonk",
+      "title": "Phonk",
+      "genre": "PHONK",
+      "cover": "assets/img/cover-phonk.jpg",
+      "description": "Auto-imported from folder: phonk",
+      "samples": [
+        {
+          "title": "PHONK IAM A SCATMAN V1",
+          "file": "assets/audio/phonk/PHONK%20IAM%20A%20SCATMAN%20V1.wav"
+        },
+        {
+          "title": "PHONK IAM A SCATMAN V2 ",
+          "file": "assets/audio/phonk/PHONK%20IAM%20A%20SCATMAN%20V2%20.wav"
+        },
+        {
+          "title": "PHONK LALALA LILA LA LA LA V1 ",
+          "file": "assets/audio/phonk/PHONK%20LALALA%20LILA%20LA%20LA%20LA%20V1%20.wav"
+        },
+        {
+          "title": "PHONK LALALA LILA LA LA LA V2 ",
+          "file": "assets/audio/phonk/PHONK%20LALALA%20LILA%20LA%20LA%20LA%20V2%20.wav"
+        },
+        {
+          "title": "PHONK LALALA LILA LA LA LA V3",
+          "file": "assets/audio/phonk/PHONK%20LALALA%20LILA%20LA%20LA%20LA%20V3.wav"
+        },
+        {
+          "title": "PHONK LES DEMONS DE MIDI",
+          "file": "assets/audio/phonk/PHONK%20LES%20DEMONS%20DE%20MIDI.wav"
+        },
+        {
+          "title": "PHONK SO REAL V1",
+          "file": "assets/audio/phonk/PHONK%20SO%20REAL%20V1.wav"
+        },
+        {
+          "title": "PHONK SO REAL V2 ",
+          "file": "assets/audio/phonk/PHONK%20SO%20REAL%20V2%20.wav"
+        },
+        {
+          "title": "Partenaire Particulier Phonk",
+          "file": "assets/audio/phonk/Partenaire%20Particulier%20Phonk.wav"
+        },
+        {
+          "title": "This is the riddim of the nigth phonk",
+          "file": "assets/audio/phonk/This%20is%20the%20riddim%20of%20the%20nigth%20phonk.wav"
+        }
+      ]
+    },
+    {
+      "id": "pop-fr",
+      "title": "Pop Fr",
+      "genre": "POP FR",
+      "cover": "assets/img/cover-pop-fr.jpg",
+      "description": "Auto-imported from folder: pop-fr",
+      "samples": [
+        {
+          "title": "9m2  à Paris",
+          "file": "assets/audio/pop-fr/9m2%20%20%C3%A0%20Paris.wav"
+        },
+        {
+          "title": "Algorythme Dopamine (Dans ma bulle 2K25).",
+          "file": "assets/audio/pop-fr/Algorythme%20Dopamine%20%28Dans%20ma%20bulle%202K25%29..wav"
+        },
+        {
+          "title": "Après midi banale",
+          "file": "assets/audio/pop-fr/Apre%CC%80s%20midi%20banale.wav"
+        },
+        {
+          "title": "Chanson FR DESOLE TUBE FACILE",
+          "file": "assets/audio/pop-fr/Chanson%20FR%20DESOLE%20TUBE%20FACILE.wav"
+        },
+        {
+          "title": "DES MOTS DES MOTS DAMOUR",
+          "file": "assets/audio/pop-fr/DES%20MOTS%20DES%20MOTS%20DAMOUR.wav"
+        },
+        {
+          "title": "Dans le metro",
+          "file": "assets/audio/pop-fr/Dans%20le%20metro.wav"
+        },
+        {
+          "title": "Demarage à froid(Dans ma bulle 2K25).",
+          "file": "assets/audio/pop-fr/Demarage%20a%CC%80%20froid%28Dans%20ma%20bulle%202K25%29..wav"
+        },
+        {
+          "title": "La Prison",
+          "file": "assets/audio/pop-fr/La%20Prison.wav"
+        },
+        {
+          "title": "Le temps peu bien attendre",
+          "file": "assets/audio/pop-fr/Le%20temps%20peu%20bien%20attendre.wav"
+        },
+        {
+          "title": "Les Trente Glorieuses de personne (Dans ma bulle 2K25)",
+          "file": "assets/audio/pop-fr/Les%20Trente%20Glorieuses%20de%20personne%20%28Dans%20ma%20bulle%202K25%29.wav"
+        },
+        {
+          "title": "Nuit au ralenti ",
+          "file": "assets/audio/pop-fr/Nuit%20au%20ralenti%20.wav"
+        },
+        {
+          "title": "Rassure moi ",
+          "file": "assets/audio/pop-fr/Rassure%20moi%20.wav"
+        },
+        {
+          "title": "Une journée au soleil ",
+          "file": "assets/audio/pop-fr/Une%20journ%C3%A9e%20au%20soleil%20.wav"
+        }
+      ]
+    },
+    {
+      "id": "remix-hiphop",
+      "title": "Remix Hiphop",
+      "genre": "REMIX HIPHOP",
+      "cover": "assets/img/cover-remix-hiphop.jpg",
+      "description": "Auto-imported from folder: remix-hiphop",
+      "samples": [
+        {
+          "title": "Bad and bougies",
+          "file": "assets/audio/remix-hiphop/Bad%20and%20bougies.wav"
+        },
+        {
+          "title": "Bodak Yellow Cardi B jazzy ",
+          "file": "assets/audio/remix-hiphop/Bodak%20Yellow%20Cardi%20B%20jazzy%20.mp3"
+        },
+        {
+          "title": "DIOR Pope Smoke 50' s jazzy",
+          "file": "assets/audio/remix-hiphop/DIOR%20Pope%20Smoke%2050%27%20s%20jazzy.mp3"
+        },
+        {
+          "title": "ICE SPYES REMIXX",
+          "file": "assets/audio/remix-hiphop/ICE%20SPYES%20REMIXX.wav"
+        },
+        {
+          "title": "KANYE STRONGER POWER ;;; ",
+          "file": "assets/audio/remix-hiphop/KANYE%20STRONGER%20POWER%20%3B%3B%3B%20.wav"
+        },
+        {
+          "title": "MANY MEN ",
+          "file": "assets/audio/remix-hiphop/MANY%20MEN%20.wav"
+        },
+        {
+          "title": "Real Slim shaddy 50 _60's",
+          "file": "assets/audio/remix-hiphop/Real%20Slim%20shaddy%2050%20_60%27s.mp3"
+        },
+        {
+          "title": "STAN FT DIDO EMINEM 50",
+          "file": "assets/audio/remix-hiphop/STAN%20FT%20DIDO%20EMINEM%2050.wav"
+        },
+        {
+          "title": "SUPERBASSE NICKY MINAJ ",
+          "file": "assets/audio/remix-hiphop/SUPERBASSE%20NICKY%20MINAJ%20.wav"
+        },
+        {
+          "title": "Still Dre",
+          "file": "assets/audio/remix-hiphop/Still%20Dre.wav"
+        },
+        {
+          "title": "be humble",
+          "file": "assets/audio/remix-hiphop/be%20humble.wav"
+        },
+        {
+          "title": "cardi b",
+          "file": "assets/audio/remix-hiphop/cardi%20b.wav"
+        },
+        {
+          "title": "funky deluré anglais ",
+          "file": "assets/audio/remix-hiphop/funky%20delur%C3%A9%20anglais%20.wav"
+        },
+        {
+          "title": "kanye arless",
+          "file": "assets/audio/remix-hiphop/kanye%20arless.wav"
+        },
+        {
+          "title": "knaye higer ",
+          "file": "assets/audio/remix-hiphop/knaye%20higer%20.wav"
+        },
+        {
+          "title": "migos",
+          "file": "assets/audio/remix-hiphop/migos.wav"
+        }
+      ]
+    },
+    {
+      "id": "tube-fr",
+      "title": "Tube Fr",
+      "genre": "TUBE FR",
+      "cover": "assets/img/cover-tube-fr.jpg",
+      "description": "Auto-imported from folder: tube-fr",
+      "samples": [
+        {
+          "title": "Ange ou Demon",
+          "file": "assets/audio/tube-fr/Ange%20ou%20Demon.mp3"
+        },
+        {
+          "title": "Belené ",
+          "file": "assets/audio/tube-fr/Belen%C3%A9%20.wav"
+        },
+        {
+          "title": "Elle reviendras pas ",
+          "file": "assets/audio/tube-fr/Elle%20reviendras%20pas%20.wav"
+        },
+        {
+          "title": "Friendzone",
+          "file": "assets/audio/tube-fr/Friendzone.mp3"
+        },
+        {
+          "title": "J'avance RnB 2 ",
+          "file": "assets/audio/tube-fr/J%27avance%20RnB%202%20.wav"
+        },
+        {
+          "title": "Jbrille pour moi ",
+          "file": "assets/audio/tube-fr/Jbrille%20pour%20moi%20.mp3"
+        },
+        {
+          "title": "Je t'appelais ma soeur ",
+          "file": "assets/audio/tube-fr/Je%20t%27appelais%20ma%20soeur%20.wav"
+        },
+        {
+          "title": "Jme choisis Mtn",
+          "file": "assets/audio/tube-fr/Jme%20choisis%20Mtn.wav"
+        },
+        {
+          "title": "On m'a dit ",
+          "file": "assets/audio/tube-fr/On%20m%27a%20dit%20.mp3"
+        },
+        {
+          "title": "Personne latin vibe",
+          "file": "assets/audio/tube-fr/Personne%20latin%20vibe.wav"
+        },
+        {
+          "title": "Reviens Pas",
+          "file": "assets/audio/tube-fr/Reviens%20Pas.wav"
+        },
+        {
+          "title": "Tu es pas de mon monde mais jte veux quand meme ",
+          "file": "assets/audio/tube-fr/Tu%20es%20pas%20de%20mon%20monde%20mais%20jte%20veux%20quand%20meme%20.wav"
+        }
+      ]
+    }
+  ]
+}

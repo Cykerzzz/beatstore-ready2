@@ -1,0 +1,25 @@
+{
+  "tiers": [
+    {
+      "id": "credit-10",
+      "title": "Starter",
+      "credits": 10,
+      "price": 9.9,
+      "desc": "Testez le store avec quelques téléchargements."
+    },
+    {
+      "id": "credit-30",
+      "title": "Creator",
+      "credits": 30,
+      "price": 24.9,
+      "desc": "Le meilleur rapport quantité/prix pour créer souvent."
+    },
+    {
+      "id": "credit-100",
+      "title": "Pro",
+      "credits": 100,
+      "price": 69.0,
+      "desc": "Pour les gros volumes (studios, labels, créateurs pro)."
+    }
+  ]
+}

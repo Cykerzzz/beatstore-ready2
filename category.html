@@ -1,0 +1,23 @@
+<script>
+  // On suppose que "pack" est déjà récupéré depuis l'URL
+  // et injecté avant ce script (comme dans ta version d'origine).
+
+  document.getElementById('catCover').src =
+    pack?.cover || 'assets/img/cover-default.jpg';
+
+  document.getElementById('catTitle').textContent =
+    pack?.title || 'Pack';
+
+  document.getElementById('catMeta').textContent =
+    `${(pack?.description || '').trim() || 'Auto-imported from folder.'} • ${(pack?.samples || []).length} beats`;
+
+  const root = document.getElementById('tracks');
+  const player = new Player(root, pack?.samples || [], { baseUrl: '' });
+</script>
+
+<!-- Scripts globaux -->
+<script src="js/bpm.js" defer></script>
+<script src="js/autoload-credits.js" defer></script>
+</body>
+</html>
+

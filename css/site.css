@@ -1,0 +1,64 @@
+/* ====== Variables + base ====== */
+:root{
+  --bg:#0b0c10; --fg:#f5f5f7; --muted:#b7b9c0;
+  --card:#14161a; --ring:#22262b;
+}
+*{box-sizing:border-box} html,body{margin:0;height:100%}
+body{background:var(--bg);color:var(--fg);font-family:ui-sans-serif,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial}
+.wrap{max-width:1100px;margin:0 auto;padding:24px}
+
+/* HERO */
+.hero{position:relative;border-radius:18px;overflow:hidden;background:linear-gradient(135deg,#0e1116,#1b1f26);margin:8px 0 22px}
+.hero img{display:block;width:100%;height:240px;object-fit:cover}
+@media(min-width:900px){ .hero img{height:300px} }
+.hero-overlay{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:flex-end;padding:18px;background:linear-gradient(180deg,transparent 50%,rgba(0,0,0,.55))}
+.hero-overlay h1{margin:0;font-size:36px;letter-spacing:.05em}
+.hero-overlay p{margin:6px 0 0;color:var(--muted)}
+
+h2{margin:10px 0 14px;font-size:20px;color:var(--muted)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:14px}
+
+.card{position:relative;display:block;padding:10px;border-radius:14px;background:var(--card);text-decoration:none;color:inherit;border:1px solid var(--ring);transition:transform .08s ease, box-shadow .12s ease}
+.card:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(0,0,0,.25)}
+.card img{width:100%;height:110px;border-radius:10px;object-fit:cover;display:block;margin-bottom:8px}
+.card h4{margin:0 0 4px;font-size:16px}
+.card p{margin:0;color:var(--muted);font-size:12px}
+.badge{position:absolute;top:8px;left:8px;background:rgba(0,0,0,.6);color:#fff;font-size:11px;padding:4px 7px;border-radius:999px;border:1px solid rgba(255,255,255,.08)}
+
+/* Category page */
+.cat-wrap{max-width:1100px;margin:0 auto;padding:24px}
+.back{display:inline-flex;gap:6px;align-items:center;font-size:13px;color:#cfd3da;opacity:.85}
+.back:hover{opacity:1}
+.cat-head{display:flex;gap:14px;align-items:center;margin:10px 0 16px}
+.cat-cover{width:56px;height:56px;border-radius:12px;overflow:hidden;flex:0 0 auto;border:1px solid var(--ring);background:#0f1115}
+.cat-title{margin:0;font-size:22px}
+.cat-meta{margin:2px 0 0;color:var(--muted);font-size:13px}
+
+/* Tracks */
+.tracks{display:flex;flex-direction:column;gap:10px;margin-top:12px}
+.row{display:grid;grid-template-columns:42px 1fr auto;align-items:center;gap:10px;padding:10px 12px;border-radius:12px;background:var(--card);border:1px solid var(--ring)}
+.idx{width:28px;height:28px;border-radius:7px;display:grid;place-items:center;background:#0e1116;color:#cfd3da;font-size:12px;border:1px solid var(--ring)}
+.title{font-size:14px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.actions{display:flex;gap:8px;align-items:center}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;height:32px;padding:0 10px;gap:6px;border-radius:10px;background:#0f1216;color:#d9dde4;border:1px solid var(--ring);font-size:13px;cursor:pointer;user-select:none}
+.btn:hover{border-color:#2f3640}
+.btn.play{background:#14202b;border-color:#1f2a34}
+.btn.play:hover{background:#172635}
+
+.seek{display:flex;align-items:center;gap:8px;min-width:220px}
+.time{font-size:12px;color:#aab1bd;width:36px;text-align:center}
+input[type="range"]{-webkit-appearance:none;appearance:none;width:220px;height:6px;border-radius:999px;background:#1a2028;outline:none;border:1px solid #222a33}
+input[type="range"]::-webkit-slider-thumb{-webkit-appearance:none;appearance:none;width:14px;height:14px;border-radius:50%;background:#4da3ff;border:2px solid #0f141a;box-shadow:0 0 0 3px rgba(77,163,255,.15)}
+input[type="range"]::-moz-range-thumb{width:14px;height:14px;border:none;border-radius:50%;background:#4da3ff}
+
+a.dl{display:inline-flex;align-items:center;justify-content:center;height:32px;padding:0 10px;border-radius:10px;background:#101317;border:1px solid var(--ring);color:#dbe1ea;font-size:13px}
+a.dl:hover{border-color:#2c3238}
+
+/* Footer */
+.foot{margin:26px 0 6px;color:#7c818b;font-size:12px}
+
+/* BPM widget */
+#bpmBox{position:fixed;right:16px;bottom:16px;background:#14161a;border:1px solid #22262b;border-radius:12px;padding:10px 12px;box-shadow:0 10px 24px rgba(0,0,0,.35);z-index:9999}
+#bpmBox h4{margin:.2rem 0 .4rem 0}
+#bpmValue{font-weight:700}

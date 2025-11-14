@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Recharger mes crédits</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/credits.css">
+  <style>
+    .topup {max-width:560px;margin:40px auto;background:#14161a;padding:18px;border-radius:14px;border:1px solid #22262b}
+    .topup h1{margin:0 0 8px}
+    .packs{display:flex;gap:10px;margin:12px 0}
+    .packs button{flex:1}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div id="creditsSlot" style="display:flex;justify-content:flex-end;margin-bottom:10px"></div>
+
+    <div class="topup">
+      <h1>Recharger mes crédits</h1>
+      <p>Mode démo (sans paiement) : ajoute des crédits sur cet appareil.</p>
+      <div class="packs">
+        <button class="btn" data-add="5">+5 crédits</button>
+        <button class="btn" data-add="20">+20 crédits</button>
+        <button class="btn" data-add="50">+50 crédits</button>
+      </div>
+      <p><a href="index.html" class="btn ok">← Retour</a></p>
+    </div>
+  </div>
+
+  <script type="module">
+    import { Credits, mountCreditsPill } from './js/credits.js';
+    mountCreditsPill(document.getElementById('creditsSlot'));
+    document.querySelectorAll('button[data-add]').forEach(btn=>{
+      btn.addEventListener('click', ()=>{
+        const n = Number(btn.getAttribute('data-add'));
+        Credits.add(n);
+        alert(`+${n} crédits ajoutés.`);
+      });
+    });
+  </script>
+</body>
+</html>

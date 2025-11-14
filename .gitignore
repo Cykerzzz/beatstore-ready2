@@ -1,0 +1,20 @@
+# Dossiers lourds / inutiles pour le site
+rvc/
+tools/
+netlify/
+.venv/
+node_modules/
+__pycache__/
+
+# Fichiers lourds qu'on ne veut pas dans GitHub
+*.wav
+*.flac
+*.aiff
+*.zip
+*.pt
+*.onnx
+*.ckpt
+
+# Fichiers système / IDE
+.DS_Store
+.vscode/

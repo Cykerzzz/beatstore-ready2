@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Beatstore — Crédits</title>
+  <link rel="stylesheet" href="css/site.css">
+  <link rel="stylesheet" href="css/credits.css">
+</head>
+<body>
+  <div class="wrap">
+    <a class="back" href="index.html">← Retour</a>
+
+    <header class="hero simple">
+      <div class="hero-overlay">
+        <h1>Crédits</h1>
+        <p>Solde actuel : <strong id="balance">0</strong> crédits</p>
+      </div>
+      <img src="assets/img/cover-default.jpg" alt="">
+    </header>
+
+    <section class="offers">
+      <button class="offer" data-add="10">+10 crédits</button>
+      <button class="offer" data-add="30">+30 crédits</button>
+      <button class="offer" data-add="80">+80 crédits</button>
+    </section>
+
+    <p class="hint">Les crédits sont stockés localement (localStorage). Ils seront débités lors d’un téléchargement.</p>
+  </div>
+
+  <script src="js/credits.js" defer></script>
+</body>
+</html>

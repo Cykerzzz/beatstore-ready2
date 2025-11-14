@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Beatstore — Explore</title>
+  <link rel="stylesheet" href="css/site.css?v=4">
+</head>
+<body>
+  <div class="wrap">
+
+    <!-- HERO / COVER ACCUEIL -->
+    <header class="hero">
+      <img src="assets/img/hero.jpg" alt="Bannière Beatstore"
+           onerror="this.onerror=null;this.src='assets/img/cover-default.jpg'">
+      <div class="hero-overlay">
+        <h1>KERCY ZUMIK</h1>
+        <p>Explore • New releases • Trending</p>
+      </div>
+    </header>
+
+    <section>
+      <h2>Explore</h2>
+      <div id="cards" class="grid"></div>
+    </section>
+
+    <footer class="foot">© 2025 Beatstore — template prêt à l’emploi</footer>
+  </div>
+
+  <script type="module">
+    import { loadPacks } from './js/app.js';
+    const cards = document.getElementById('cards');
+    const data  = await loadPacks();
+    (data.packs || []).forEach(pk => {
+      const el = document.createElement('a');
+      el.className = 'card';
+      el.href = `category.html?c=${encodeURIComponent(pk.id)}`;
+      el.innerHTML = `
+        <span class="badge">${(pk.genre||pk.title||'PACK').toUpperCase()}</span>
+        <img loading="lazy" src="${pk.cover||'assets/img/cover-default.jpg'}" alt="${pk.title}">
+        <h4>${pk.title}</h4>
+        <p>${(pk.samples||[]).length} beats</p>`;
+      cards.appendChild(el);
+    });
+  </script>
+</body>
+</html>

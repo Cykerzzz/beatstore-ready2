@@ -1,0 +1,5 @@
+/* extras for credits page */ 
+.offers{display:flex;gap:10px;margin:10px 0 16px}
+.offer{display:inline-flex;align-items:center;justify-content:center;padding:10px 14px;border-radius:12px;background:#101317;border:1px solid #22262b;color:#e2e7ef;cursor:pointer}
+.offer:hover{border-color:#2f3640}
+.hint{opacity:.75}
