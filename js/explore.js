@@ -1,41 +1,47 @@
-// js/explore.js
-(async function () {
-  const grid = document.querySelector(".grid.cards, .cats") || document.body;
-  let data;
+async function loadPacks() {
   try {
-    const res = await fetch("data/packs.json", { cache: "no-store" });
-    data = await res.json();
-  } catch (e) {
-    console.error("packs.json introuvable", e);
-    return;
+    const res = await fetch('data/packs.json');
+    if (!res.ok) {
+      throw new Error('Erreur HTTP ' + res.status);
+    }
+
+    // On récupère le tableau de packs
+    const packs = await res.json();
+
+    renderPacks(packs);
+  } catch (err) {
+    console.error('Erreur lors du chargement des packs :', err);
   }
-  function coverFor(id){
-    return new Promise((resolve)=>{
-      const jpg = new Image();
-      jpg.onload = ()=>resolve(`assets/img/cover-${id}.jpg`);
-      jpg.onerror = ()=>{
-        const png = new Image();
-        png.onload = ()=>resolve(`assets/img/cover-${id}.png`);
-        png.onerror = ()=>resolve("assets/img/cover-default.jpg");
-        png.src = `assets/img/cover-${id}.png`;
-      };
-      jpg.src = `assets/img/cover-${id}.jpg`;
-    });
-  }
-  async function card(pack){
-    const a=document.createElement("a");
-    a.href=`category.html?id=${encodeURIComponent(pack.id)}`;
-    a.className="card";
-    const lbl=document.createElement("div");
-    lbl.className="label"; lbl.textContent=(pack.genre||pack.title||"").toUpperCase();
-    const h4=document.createElement("h4"); h4.textContent=pack.title||pack.id;
-    const sm=document.createElement("small"); sm.textContent=`${(pack.samples||[]).length} beats`;
-    const img=document.createElement("img"); img.className="thumb"; img.alt=`${pack.id} cover`;
-    img.src="assets/img/cover-default.jpg"; coverFor(pack.id).then(src=>img.src=src);
-    a.append(lbl,img,h4,sm);
-    return a;
-  }
-  grid.innerHTML="";
-  for(const p of (data.packs||[])){ grid.appendChild(await card(p)); }
-  console.log("Explore OK:", (data.packs||[]).length);
-})();
+}
+
+function renderPacks(packs) {
+  // Le conteneur dans ton HTML : <div id="sec-packs" class="grid cards"></div>
+  const container = document.getElementById('sec-packs');
+  if (!container) return;
+
+  container.innerHTML = '';
+
+  packs.forEach((pack) => {
+    const card = document.createElement('article');
+    card.className = 'card';
+
+    const img = document.createElement('img');
+    img.src = pack.cover;
+    img.alt = pack.title;
+
+    const title = document.createElement('h3');
+    title.textContent = pack.title;
+
+    const desc = document.createElement('p');
+    desc.textContent = pack.description;
+
+    card.appendChild(img);
+    card.appendChild(title);
+    card.appendChild(desc);
+
+    container.appendChild(card);
+  });
+}
+
+// On lance le chargement quand la page est prête
+document.addEventListener('DOMContentLoaded', loadPacks);

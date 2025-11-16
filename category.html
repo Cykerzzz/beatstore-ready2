@@ -1,23 +1,325 @@
-<script>
-  // On suppose que "pack" est déjà récupéré depuis l'URL
-  // et injecté avant ce script (comme dans ta version d'origine).
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Beatstore – Pack</title>
 
-  document.getElementById('catCover').src =
-    pack?.cover || 'assets/img/cover-default.jpg';
+  <!-- Style simple dark, proche de la home -->
+  <style>
+    body {
+      margin: 0;
+      background: #0b0c10;
+      color: #f5f5f7;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+        Roboto, Helvetica, Arial, sans-serif;
+    }
+    .wrap {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 24px;
+    }
+    header {
+      padding: 24px 24px 0;
+    }
+    .hero {
+      display: grid;
+      grid-template-columns: minmax(0, 280px) minmax(0, 1fr);
+      gap: 24px;
+      align-items: center;
+      background: #15161a;
+      border-radius: 24px;
+      overflow: hidden;
+      padding: 24px;
+    }
+    .hero img {
+      width: 100%;
+      border-radius: 18px;
+      object-fit: cover;
+      max-height: 220px;
+    }
+    .hero-title {
+      font-size: 32px;
+      font-weight: 700;
+      margin: 0 0 8px;
+    }
+    .hero-meta {
+      opacity: 0.75;
+      margin-bottom: 12px;
+    }
+    .hero-desc {
+      font-size: 15px;
+      opacity: 0.9;
+    }
+    h2 {
+      margin: 32px 0 16px;
+      font-size: 22px;
+    }
+    .tracks {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-bottom: 24px;
+    }
+    .track {
+      background: #15161a;
+      border-radius: 16px;
+      padding: 12px 16px;
+      display: grid;
+      grid-template-columns: minmax(0, 1.5fr) auto;
+      gap: 12px;
+      align-items: center;
+      transition: background 0.15s, border 0.15s;
+    }
+    .track-main {
+      min-width: 0;
+    }
+    .track-title {
+      font-weight: 600;
+      margin-bottom: 4px;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+    }
+    .track-meta {
+      font-size: 13px;
+      opacity: 0.8;
+    }
+    .track button {
+      padding: 6px 12px;
+      border-radius: 999px;
+      border: none;
+      cursor: pointer;
+      font-size: 13px;
+    }
+    .track.is-playing {
+      border: 1px solid #4ade80;
+      background: #111827;
+    }
+    .empty {
+      opacity: 0.7;
+      font-size: 14px;
+    }
+    a.back {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 14px;
+      text-decoration: none;
+      color: #f5f5f7;
+      opacity: 0.8;
+      margin-bottom: 16px;
+    }
+    a.back:hover {
+      opacity: 1;
+    }
+    #player-wrap {
+      background: #15161a;
+      border-radius: 16px;
+      padding: 12px 16px 16px;
+    }
+    #player-wrap audio {
+      width: 100%;
+    }
+    #now-playing {
+      font-size: 13px;
+      opacity: 0.8;
+      margin-top: 6px;
+    }
+    @media (max-width: 720px) {
+      .hero {
+        grid-template-columns: minmax(0, 1fr);
+      }
+      .track {
+        grid-template-columns: minmax(0, 1fr);
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="wrap">
+    <a href="index.html" class="back">← Retour à l'explore</a>
+    <div class="hero">
+      <img id="catCover" src="assets/img/cat-default.jpg" alt="Cover pack" />
+      <div>
+        <p class="hero-meta">Pack</p>
+        <h1 class="hero-title" id="catTitle">Titre du pack</h1>
+        <p class="hero-meta" id="catMeta">Description • 0 beats</p>
+        <p class="hero-desc" id="catDesc">
+          Chargement du pack en cours…
+        </p>
+      </div>
+    </div>
+  </header>
 
-  document.getElementById('catTitle').textContent =
-    pack?.title || 'Pack';
+  <main class="wrap">
+    <h2>Beats du pack</h2>
+    <div id="tracks" class="tracks">
+      <!-- Les pistes seront injectées ici -->
+    </div>
 
-  document.getElementById('catMeta').textContent =
-    `${(pack?.description || '').trim() || 'Auto-imported from folder.'} • ${(pack?.samples || []).length} beats`;
+    <!-- Player global -->
+    <div id="player-wrap">
+      <p style="font-size:13px;opacity:.8;margin:0 0 4px;">Lecture en continu</p>
+      <audio id="global-audio" controls></audio>
+      <p id="now-playing"></p>
+    </div>
+  </main>
 
-  const root = document.getElementById('tracks');
-  const player = new Player(root, pack?.samples || [], { baseUrl: '' });
-</script>
+  <script>
+    let currentSamples = [];
+    let currentIndex = -1;
+    let audioEl = null;
 
-<!-- Scripts globaux -->
-<script src="js/bpm.js" defer></script>
-<script src="js/autoload-credits.js" defer></script>
+    function getQueryParam(name) {
+      const params = new URLSearchParams(window.location.search);
+      return params.get(name);
+    }
+
+    function setPlayingCard(index) {
+      const cards = document.querySelectorAll(".track");
+      cards.forEach((c) => c.classList.remove("is-playing"));
+      if (index >= 0 && cards[index]) {
+        cards[index].classList.add("is-playing");
+      }
+    }
+
+    function updateNowPlaying(sample) {
+      const np = document.getElementById("now-playing");
+      if (!sample) {
+        np.textContent = "";
+        return;
+      }
+      const bpm = sample.bpm ? sample.bpm + " BPM" : "BPM n/c";
+      const key = sample.key ? " • " + sample.key : "";
+      const price = " • " + (sample.price || 300) + " €";
+      np.textContent =
+        "En lecture : " + (sample.title || "Beat") + " • " + bpm + key + price;
+    }
+
+    function playTrack(index) {
+      if (!audioEl || !currentSamples || !currentSamples[index]) return;
+      currentIndex = index;
+      const sample = currentSamples[index];
+
+      audioEl.src = sample.file;
+      audioEl.play().catch((err) => console.warn("Play error:", err));
+
+      setPlayingCard(index);
+      updateNowPlaying(sample);
+    }
+
+    async function loadPackPage() {
+      const catId = getQueryParam("c") || getQueryParam("id");
+      if (!catId) {
+        document.getElementById("catTitle").textContent = "Pack introuvable";
+        document.getElementById("catDesc").textContent =
+          "Aucun identifiant de pack fourni dans l'URL.";
+        return;
+      }
+
+      let data;
+      try {
+        const res = await fetch("data/packs.json");
+        if (!res.ok) throw new Error("HTTP " + res.status);
+        data = await res.json();
+      } catch (e) {
+        console.error("Erreur chargement packs.json", e);
+        document.getElementById("catTitle").textContent = "Erreur de chargement";
+        document.getElementById("catDesc").textContent =
+          "Impossible de charger la liste des packs.";
+        return;
+      }
+
+      const packs = Array.isArray(data) ? data : data.packs || [];
+      const pack = packs.find((p) => p.id === catId);
+
+      if (!pack) {
+        document.getElementById("catTitle").textContent = "Pack introuvable";
+        document.getElementById("catDesc").textContent =
+          "Aucun pack ne correspond à l'identifiant : " + catId;
+        return;
+      }
+
+      // Hero
+      document.getElementById("catCover").src =
+        pack.cover || "assets/img/cat-default.jpg";
+      document.getElementById("catTitle").textContent = pack.title || "Pack";
+      const count = (pack.samples || []).length;
+      document.getElementById("catMeta").textContent =
+        (pack.description || "Pack de beats.") +
+        " • " +
+        count +
+        " beat" +
+        (count > 1 ? "s" : "");
+      document.getElementById("catDesc").textContent =
+        pack.description || "Pack de beats sélectionnés.";
+
+      // Tracks
+      const root = document.getElementById("tracks");
+      root.innerHTML = "";
+
+      audioEl = document.getElementById("global-audio");
+      currentSamples = pack.samples || [];
+
+      if (!currentSamples.length) {
+        const p = document.createElement("p");
+        p.className = "empty";
+        p.textContent = "Aucun beat n'est encore associé à ce pack.";
+        root.appendChild(p);
+        updateNowPlaying(null);
+        return;
+      }
+
+      currentSamples.forEach((sample, index) => {
+        const card = document.createElement("div");
+        card.className = "track";
+
+        const main = document.createElement("div");
+        main.className = "track-main";
+
+        const title = document.createElement("div");
+        title.className = "track-title";
+        title.textContent = (index + 1) + ". " + (sample.title || "Beat");
+
+        const meta = document.createElement("div");
+        meta.className = "track-meta";
+        const bpm = sample.bpm ? sample.bpm + " BPM" : "BPM n/c";
+        const key = sample.key ? " • " + sample.key : "";
+        const price = " • " + (sample.price || 300) + " €";
+        meta.textContent = bpm + key + price;
+
+        main.appendChild(title);
+        main.appendChild(meta);
+
+        const btn = document.createElement("button");
+        btn.textContent = "▶ Play";
+        btn.addEventListener("click", (e) => {
+          e.stopPropagation();
+          playTrack(index);
+        });
+
+        card.addEventListener("dblclick", () => playTrack(index));
+
+        card.appendChild(main);
+        card.appendChild(btn);
+        root.appendChild(card);
+      });
+
+      if (audioEl) {
+        audioEl.addEventListener("ended", () => {
+          if (currentIndex >= 0 && currentIndex < currentSamples.length - 1) {
+            playTrack(currentIndex + 1);
+          } else {
+            setPlayingCard(-1);
+            updateNowPlaying(null);
+          }
+        });
+      }
+    }
+
+    document.addEventListener("DOMContentLoaded", loadPackPage);
+  </script>
 </body>
 </html>
 

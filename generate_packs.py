@@ -1,81 +1,142 @@
 #!/usr/bin/env python3
-# generate_packs.py — scanne assets/audio/* et produit data/packs.json
-
-import os, json, sys
+import json
 from pathlib import Path
-from urllib.parse import quote
 
-ROOT = Path(__file__).resolve().parent
-AUDIO_DIR = ROOT / "assets" / "audio"
-IMG_DIR   = ROOT / "assets" / "img"
-OUT_DIR   = ROOT / "data"
-OUT_FILE  = OUT_DIR / "packs.json"
+ROOT = Path(__file__).parent
+AUDIO_ROOT = ROOT / "assets" / "audio"
 
-AUDIO_EXTS = {".wav", ".mp3", ".aiff", ".aif", ".m4a", ".flac", ".ogg"}
+# Tous tes packs ici
+PACKS_CONFIG = [
+    {
+        "id": "trap",
+        "title": "Trap",
+        "cover": "assets/img/cat-trap.jpg",
+        "description": "Trap bangers & dark vibes.",
+        "audio_folder": "Trap",
+    },
+    {
+        "id": "afro-fr",
+        "title": "Afro Fr",
+        "cover": "assets/img/cat-afro-fr.jpg",
+        "description": "Afro / pop française chaude.",
+        "audio_folder": "afro-fr",
+    },
+    {
+        "id": "kpop",
+        "title": "Kpop",
+        "cover": "assets/img/cat-kpop.jpg",
+        "description": "K-pop sucrée et énergétique.",
+        "audio_folder": "kpop",
+    },
+    {
+        "id": "kpop-xmas",
+        "title": "Kpop Xmas",
+        "cover": "assets/img/cat-kpop-xmas.jpg",
+        "description": "K-pop spéciale Noël.",
+        "audio_folder": "kpop-xmas",
+    },
+    {
+        "id": "phonk",
+        "title": "Phonk",
+        "cover": "assets/img/cat-phonk.jpg",
+        "description": "Phonk sombre et club.",
+        "audio_folder": "phonk",
+    },
+    {
+        "id": "pop-fr",
+        "title": "Pop Fr",
+        "cover": "assets/img/cat-pop-fr.jpg",
+        "description": "Pop française moderne.",
+        "audio_folder": "pop-fr",
+    },
+    {
+        "id": "remix-hiphop",
+        "title": "Remix Hiphop",
+        "cover": "assets/img/cat-remix-hiphop.jpg",
+        "description": "Remix hip-hop créatifs.",
+        "audio_folder": "remix-hiphop",
+    },
+    {
+        "id": "tube-fr",
+        "title": "Tube Fr",
+        "cover": "assets/img/cat-tube-fr.jpg",
+        "description": "Tubes français radio-ready.",
+        "audio_folder": "tube-fr",
+    },
+    {
+    "id": "other-vibes",
+    "title": "Other Vibes",
+    "cover": "assets/img/cat-othervibes.jpg",
+    "description": "Vibes expérimentales & bonus tracks.",
+    "audio_folder": "Other vibes",
+    },
+]
 
-def nice_title(s: str) -> str:
-    s = s.replace('_', ' ').replace('-', ' ')
-    return ' '.join(w.capitalize() for w in s.split())
 
-def pick_cover(cat_id: str) -> str:
-    # essaie plusieurs variantes (jpg/png/jpeg)
-    candidates = [
-        IMG_DIR / f"cover-{cat_id}.jpg",
-        IMG_DIR / f"cover-{cat_id}.png",
-        IMG_DIR / f"{cat_id}.jpg",
-        IMG_DIR / f"{cat_id}.png",
-    ]
-    for p in candidates:
-        if p.exists():
-            rel = p.relative_to(ROOT).as_posix()
-            return rel
-    # fallback générique
-    default = IMG_DIR / "cover-default.jpg"
-    if default.exists():
-        return default.relative_to(ROOT).as_posix()
-    return "assets/img/cover-default.jpg"
+def filename_to_title(path: Path) -> str:
+    name = path.stem
+    name = name.replace("_", " ").strip()
+    return name
+
+
+def make_sample_id(pack_id: str, path: Path) -> str:
+    base = path.stem.lower()
+    for ch in [" ", "_", "(", ")", ".", ",", ";", "’", "'", "«", "»"]:
+        base = base.replace(ch, "-")
+    while "--" in base:
+        base = base.replace("--", "-")
+    base = base.strip("-")
+    return f"{pack_id}-{base}"
+
+
+def build_packs():
+    packs = []
+
+    for cfg in PACKS_CONFIG:
+        pack_id = cfg["id"]
+        audio_folder = AUDIO_ROOT / cfg["audio_folder"]
+
+        if not audio_folder.exists():
+            print(f"[WARN] Dossier audio introuvable pour {pack_id}: {audio_folder}")
+            samples = []
+        else:
+            audio_files = list(audio_folder.glob("*.wav")) + list(
+                audio_folder.glob("*.mp3")
+            )
+            audio_files.sort()
+
+            samples = []
+            for f in audio_files:
+                sample = {
+                    "id": make_sample_id(pack_id, f),
+                    "title": filename_to_title(f),
+                    "bpm": None,   # à remplir plus tard si tu veux
+                    "key": "",
+                    "file": str((Path("assets") / "audio" / cfg["audio_folder"] / f.name).as_posix()),
+                    "price": 300   # 💸 tous les beats à 300 €
+                }
+                samples.append(sample)
+
+        pack_obj = {
+            "id": cfg["id"],
+            "title": cfg["title"],
+            "cover": cfg["cover"],
+            "description": cfg["description"],
+            "samples": samples,
+        }
+        packs.append(pack_obj)
+
+    return {"packs": packs}
+
 
 def main():
-    if not AUDIO_DIR.exists():
-        print(f"[!] Dossier audio introuvable: {AUDIO_DIR}")
-        sys.exit(1)
-    OUT_DIR.mkdir(parents=True, exist_ok=True)
-
-    packs = []
-    for cat in sorted(p.name for p in AUDIO_DIR.iterdir() if p.is_dir()):
-        cat_path = AUDIO_DIR / cat
-        samples = []
-        for root, _, files in os.walk(cat_path):
-            for f in sorted(files):
-                ext = Path(f).suffix.lower()
-                if ext in AUDIO_EXTS:
-                    full = Path(root) / f
-                    rel_path = full.relative_to(ROOT).as_posix()
-
-                    # Encodage URL des chemins (espaces, accents) pour le navigateur
-                    url = '/'.join(quote(part) for part in rel_path.split('/'))
-                    samples.append({
-                        "title": Path(f).stem,
-                        "file": url
-                    })
-
-        if not samples:
-            continue
-
-        packs.append({
-            "id": cat,                           # ex: "afro-fr"
-            "title": nice_title(cat),            # ex: "Afro Fr"
-            "genre": cat.upper().replace('-',' '),
-            "cover": pick_cover(cat),
-            "description": f"Auto-imported from folder: {cat}",
-            "samples": samples
-        })
-
-    data = {"packs": packs}
-    with open(OUT_FILE, "w", encoding="utf-8") as f:
+    data = build_packs()
+    out_path = ROOT / "data" / "packs.json"
+    out_path.parent.mkdir(parents=True, exist_ok=True)
+    with out_path.open("w", encoding="utf-8") as f:
         json.dump(data, f, ensure_ascii=False, indent=2)
+    print(f"✅ packs.json généré avec succès ({out_path})")
 
-    print(f"[OK] Écrit {OUT_FILE} avec {len(packs)} pack(s).")
 
 if __name__ == "__main__":
     main()

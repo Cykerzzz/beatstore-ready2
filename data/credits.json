@@ -1,25 +1,29 @@
 {
-  "tiers": [
+  "packs": [
     {
-      "id": "credit-10",
+      "id": "starter",
       "title": "Starter",
-      "credits": 10,
-      "price": 9.9,
-      "desc": "Testez le store avec quelques téléchargements."
+      "description": "Pour tester tranquillement le catalogue.",
+      "credits": 20,
+      "price": 9,
+      "badge": "Découverte"
     },
     {
-      "id": "credit-30",
+      "id": "creator",
       "title": "Creator",
-      "credits": 30,
-      "price": 24.9,
-      "desc": "Le meilleur rapport quantité/prix pour créer souvent."
+      "description": "Parfait si tu prends souvent des beats.",
+      "credits": 60,
+      "price": 24,
+      "badge": "Le plus populaire"
     },
     {
-      "id": "credit-100",
+      "id": "pro",
       "title": "Pro",
-      "credits": 100,
-      "price": 69.0,
-      "desc": "Pour les gros volumes (studios, labels, créateurs pro)."
+      "description": "Pour les gros volumes, labels, studios.",
+      "credits": 150,
+      "price": 49,
+      "badge": "Meilleur ratio"
     }
   ]
 }
+

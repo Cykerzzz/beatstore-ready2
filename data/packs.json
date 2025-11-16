@@ -1,58 +1,948 @@
-[
-  {
-    "id": "trap",
-    "title": "Trap",
-    "cover": "assets/img/cat-trap.jpg",
-    "description": "Trap bangers & dark vibes.",
-    "samples": []
-  },
-  {
-    "id": "afro-fr",
-    "title": "Afro Fr",
-    "cover": "assets/img/cat-afrofr.jpg",
-    "description": "Afro / pop française chaude.",
-    "samples": []
-  },
-  {
-    "id": "kpop",
-    "title": "Kpop",
-    "cover": "assets/img/cat-kpop.jpg",
-    "description": "K-pop sucrée et énergétique.",
-    "samples": []
-  },
-  {
-    "id": "kpop-xmas",
-    "title": "Kpop Xmas",
-    "cover": "assets/img/cat-kpopxmas.jpg",
-    "description": "K-pop spéciale Noël.",
-    "samples": []
-  },
-  {
-    "id": "phonk",
-    "title": "Phonk",
-    "cover": "assets/img/cat-phonk.jpg",
-    "description": "Phonk sombre et club.",
-    "samples": []
-  },
-  {
-    "id": "pop-fr",
-    "title": "Pop Fr",
-    "cover": "assets/img/cat-popfr.jpg",
-    "description": "Pop française moderne.",
-    "samples": []
-  },
-  {
-    "id": "remix-hiphop",
-    "title": "Remix Hiphop",
-    "cover": "assets/img/cat-remixhiphop.jpg",
-    "description": "Remix hip-hop créatifs.",
-    "samples": []
-  },
-  {
-    "id": "tube-fr",
-    "title": "Tube Fr",
-    "cover": "assets/img/cat-tubefr.jpg",
-    "description": "Tubes français radio-ready.",
-    "samples": []
-  }
-]
+{
+  "packs": [
+    {
+      "id": "trap",
+      "title": "Trap",
+      "cover": "assets/img/cat-trap.jpg",
+      "description": "Trap bangers & dark vibes.",
+      "samples": [
+        {
+          "id": "trap-coeur-froid",
+          "title": "Coeur Froid",
+          "bpm": null,
+          "key": "",
+          "file": "assets/audio/Trap/Coeur Froid.wav",
+          "price": 300
+        },
+        {
+          "id": "trap-goyard-goyard-goyard",
+          "title": "GOYARD GOYARD GOYARD",
+          "bpm": null,
+          "key": "",
+          "file": "assets/audio/Trap/GOYARD GOYARD GOYARD .wav",
+          "price": 300
+        },
+        {
+          "id": "trap-hermes-j-avance-v1",
+          "title": "Hermes j'avance v1",
+          "bpm": null,
+          "key": "",
+          "file": "assets/audio/Trap/Hermes j'avance v1 .wav",
+          "price": 300
+        },
+        {
+          "id": "trap-hermes-j-avance-v2",
+          "title": "Hermes j'avance v2",
+          "bpm": null,
+          "key": "",
+          "file": "assets/audio/Trap/Hermes j'avance v2.wav",
+          "price": 300
+        },
+        {
+          "id": "trap-je-suis-la-rue-autrement",
+          "title": "Je suis la rue autrement",
+          "bpm": null,
+          "key": "",
+          "file": "assets/audio/Trap/Je suis la rue autrement.wav",
+          "price": 300
+        }
+      ]
+    },
+    {
+      "id": "afro-fr",
+      "title": "Afro Fr",
+      "cover": "assets/img/cat-afro-fr.jpg",
+      "description": "Afro / pop française chaude.",
+      "samples": [
+        {
+          "id": "afro-fr-jte-le-laisse-la",
+          "title": "- Jte le laisse la",
+          "bpm": null,
+          "key": "",
+          "file": "assets/audio/afro-fr/- Jte le laisse la .wav",
+          "price": 300
+        },
+        {
+          "id": "afro-fr-belle-histoire",
+          "title": "Belle histoire",
+          "bpm": null,
+          "key": "",
+          "file": "assets/audio/afro-fr/Belle histoire .wav",
+          "price": 300
+        },
+        {
+          "id": "afro-fr-c-etait-simple",
+          "title": "C'etait Simple",
+          "bpm": null,
+          "key": "",
+          "file": "assets/audio/afro-fr/C'etait Simple .wav",
+          "price": 300
+        },
+        {
+          "id": "afro-fr-coréen-afro-imasitumo",
+          "title": "Coréen Afro Imasitumo",
+          "bpm": null,
+          "key": "",
+          "file": "assets/audio/afro-fr/Coréen Afro Imasitumo.wav",
+          "price": 300
+        },
+        {
+          "id": "afro-fr-drama-queen",
+          "title": "DRAMA QUEEN",
+          "bpm": null,
+          "key": "",
+          "file": "assets/audio/afro-fr/DRAMA QUEEN.wav",
+          "price": 300
+        },
+        {
+          "id": "afro-fr-dali-dali",
+          "title": "Dali Dali",
+          "bpm": null,
+          "key": "",
+          "file": "assets/audio/afro-fr/Dali Dali.mp3",
+          "price": 300
+        },
+        {
+          "id": "afro-fr-drama-queen-v2",
+          "title": "Drama Queen v2",
+          "bpm": null,
+          "key": "",
+          "file": "assets/audio/afro-fr/Drama Queen v2.wav",
+          "price": 300
+        },
+        {
+          "id": "afro-fr-encore-encore-encore",
+          "title": "Encore Encore Encore",
+          "bpm": null,
+          "key": "",
+          "file": "assets/audio/afro-fr/Encore Encore Encore.wav",
+          "price": 300
+        },
+        {
+          "id": "afro-fr-j-arrivais-pas-à-partir",
+          "title": "J'arrivais pas à partir",
+          "bpm": null,
+          "key": "",
+          "file": "assets/audio/afro-fr/J'arrivais pas à partir.wav",
+          "price": 300
+        },
+        {
+          "id": "afro-fr-jamais-assez",
+          "title": "Jamais Assez",
+          "bpm": null,
+          "key": "",
+          "file": "assets/audio/afro-fr/Jamais Assez.wav",
+          "price": 300
+        },
+        {
+          "id": "afro-fr-je-me-suis-perdue-en-toi",
+          "title": "Je me suis perdue en toi",
+          "bpm": null,
+          "key": "",
+          "file": "assets/audio/afro-fr/Je me suis perdue en toi .wav",
+          "price": 300
+        },
+        {
+          "id": "afro-fr-je-me-suis-perdue-en-toi-v2",
+          "title": "Je me suis perdue en toi v2",
+          "bpm": null,
+          "key": "",
+          "file": "assets/audio/afro-fr/Je me suis perdue en toi v2.wav",
+          "price": 300
+        },
+        {
+          "id": "afro-fr-juste-un-flirt",
+          "title": "Juste un flirt",
+          "bpm": null,
+          "key": "",
+          "file": "assets/audio/afro-fr/Juste un flirt .wav",
+          "price": 300
+        },
+        {
+          "id": "afro-fr-oublies-moi",
+          "title": "Oublies moi",
+          "bpm": null,
+          "key": "",
+          "file": "assets/audio/afro-fr/Oublies moi .mp3",
+          "price": 300
+        },
+        {
+          "id": "afro-fr-perdone-esp",
+          "title": "Perdone (esp)",
+          "bpm": null,
+          "key": "",
+          "file": "assets/audio/afro-fr/Perdone (esp) .mp3",
+          "price": 300
+        },
+        {
+          "id": "afro-fr-trop-de-feeling",
+          "title": "Trop de feeling",
+          "bpm": null,
+          "key": "",
+          "file": "assets/audio/afro-fr/Trop de feeling.wav",
+          "price": 300
+        },
+        {
+          "id": "afro-fr-trop-tard",
+          "title": "Trop tard",
+          "bpm": null,
+          "key": "",
+          "file": "assets/audio/afro-fr/Trop tard .mp3",
+          "price": 300
+        },
+        {
+          "id": "afro-fr-tu-etais-l-interdit",
+          "title": "Tu etais l'interdit",
+          "bpm": null,
+          "key": "",
+          "file": "assets/audio/afro-fr/Tu etais l'interdit.wav",
+          "price": 300
+        },
+        {
+          "id": "afro-fr-viens-on-part",
+          "title": "Viens on part",
+          "bpm": null,
+          "key": "",
+          "file": "assets/audio/afro-fr/Viens on part .wav",
+          "price": 300
+        },
+        {
+          "id": "afro-fr-shuk-shuk-1",
+          "title": "shuk shuk  (1)",
+          "bpm": null,
+          "key": "",
+          "file": "assets/audio/afro-fr/shuk shuk  (1).wav",
+          "price": 300
+        }
+      ]
+    },
+    {
+      "id": "kpop",
+      "title": "Kpop",
+      "cover": "assets/img/cat-kpop.jpg",
+      "description": "K-pop sucrée et énergétique.",
+      "samples": [
+        {
+          "id": "kpop-burn-kpop",
+          "title": "Burn Kpop",
+          "bpm": null,
+          "key": "",
+          "file": "assets/audio/kpop/Burn Kpop.wav",
+          "price": 300
+        },
+        {
+          "id": "kpop-iam-still-here-kpop-tube",
+          "title": "Iam Still Here Kpop ( TUBE )",
+          "bpm": null,
+          "key": "",
+          "file": "assets/audio/kpop/Iam Still Here Kpop ( TUBE ).wav",
+          "price": 300
+        },
+        {
+          "id": "kpop-k-pop-dark",
+          "title": "K POP DARK",
+          "bpm": null,
+          "key": "",
+          "file": "assets/audio/kpop/K POP DARK .wav",
+          "price": 300
+        },
+        {
+          "id": "kpop-kop-1",
+          "title": "KOP 1",
+          "bpm": null,
+          "key": "",
+          "file": "assets/audio/kpop/KOP 1.wav",
+          "price": 300
+        },
+        {
+          "id": "kpop-kopp-i-dont-want-your-love-4-xmas-betu",
+          "title": "KOPP I DONT WANT YOUR LOVE 4 XMAS BETU",
+          "bpm": null,
+          "key": "",
+          "file": "assets/audio/kpop/KOPP I DONT WANT YOUR LOVE 4 XMAS BETU.wav",
+          "price": 300
+        },
+        {
+          "id": "kpop-kpop-balade-betu-homme-femme",
+          "title": "KPOP BALADE BETU HOMME FEMME",
+          "bpm": null,
+          "key": "",
+          "file": "assets/audio/kpop/KPOP BALADE BETU HOMME FEMME.wav",
+          "price": 300
+        },
+        {
+          "id": "kpop-kpop-balade-douce-man",
+          "title": "KPOP BALADE DOUCE MAN",
+          "bpm": null,
+          "key": "",
+          "file": "assets/audio/kpop/KPOP BALADE DOUCE MAN .wav",
+          "price": 300
+        },
+        {
+          "id": "kpop-kpop-betu-dark-2",
+          "title": "KPOP BETU DARK 2",
+          "bpm": null,
+          "key": "",
+          "file": "assets/audio/kpop/KPOP BETU DARK 2.wav",
+          "price": 300
+        },
+        {
+          "id": "kpop-kpop-betu-la-mi-do-mi",
+          "title": "KPOP BETU LA MI DO MI",
+          "bpm": null,
+          "key": "",
+          "file": "assets/audio/kpop/KPOP BETU LA MI DO MI .wav",
+          "price": 300
+        },
+        {
+          "id": "kpop-kpop-darke-betu",
+          "title": "KPOP DARKE BETU",
+          "bpm": null,
+          "key": "",
+          "file": "assets/audio/kpop/KPOP DARKE BETU .wav",
+          "price": 300
+        },
+        {
+          "id": "kpop-kpop-lmao-one-lide",
+          "title": "KPOP LMAO ONE LIDE",
+          "bpm": null,
+          "key": "",
+          "file": "assets/audio/kpop/KPOP LMAO ONE LIDE .wav",
+          "price": 300
+        },
+        {
+          "id": "kpop-loose-control-kpop-tube",
+          "title": "Loose Control Kpop ( TUBE )",
+          "bpm": null,
+          "key": "",
+          "file": "assets/audio/kpop/Loose Control Kpop ( TUBE ).wav",
+          "price": 300
+        },
+        {
+          "id": "kpop-love-is-always-slow-kpop-tube-anime",
+          "title": "Love is Always Slow Kpop ( TUBE Anime )",
+          "bpm": null,
+          "key": "",
+          "file": "assets/audio/kpop/Love is Always Slow Kpop ( TUBE Anime ).wav",
+          "price": 300
+        },
+        {
+          "id": "kpop-no-fear-no-more-kpop-tube",
+          "title": "No Fear No more Kpop ( TUBE )",
+          "bpm": null,
+          "key": "",
+          "file": "assets/audio/kpop/No Fear No more Kpop ( TUBE ).wav",
+          "price": 300
+        },
+        {
+          "id": "kpop-turn-it-up-kpop-tube",
+          "title": "Turn it Up  Kpop ( TUBE )",
+          "bpm": null,
+          "key": "",
+          "file": "assets/audio/kpop/Turn it Up  Kpop ( TUBE ).wav",
+          "price": 300
+        }
+      ]
+    },
+    {
+      "id": "kpop-xmas",
+      "title": "Kpop Xmas",
+      "cover": "assets/img/cat-kpop-xmas.jpg",
+      "description": "K-pop spéciale Noël.",
+      "samples": [
+        {
+          "id": "kpop-xmas-kpop-all-i-want-for-christmas-is-you-v2",
+          "title": "KPOP - All I Want for Christmas Is You  V2",
+          "bpm": null,
+          "key": "",
+          "file": "assets/audio/kpop-xmas/KPOP - All I Want for Christmas Is You  V2.wav",
+          "price": 300
+        },
+        {
+          "id": "kpop-xmas-kpop-all-i-want-for-christmas-is-you",
+          "title": "KPOP - All I Want for Christmas Is You",
+          "bpm": null,
+          "key": "",
+          "file": "assets/audio/kpop-xmas/KPOP - All I Want for Christmas Is You .wav",
+          "price": 300
+        },
+        {
+          "id": "kpop-xmas-kpop-noel-jingle-bells-jingle-bells-징글벨-징글벨-1",
+          "title": "KPOP NOEL Jingle bells, jingle bells (징글벨 징글벨)-1",
+          "bpm": null,
+          "key": "",
+          "file": "assets/audio/kpop-xmas/KPOP NOEL Jingle bells, jingle bells (징글벨 징글벨)-1.wav",
+          "price": 300
+        },
+        {
+          "id": "kpop-xmas-kpop-noel-lala-la-lala",
+          "title": "KPOP NOEL LALA LA LALA",
+          "bpm": null,
+          "key": "",
+          "file": "assets/audio/kpop-xmas/KPOP NOEL LALA LA LALA .wav",
+          "price": 300
+        },
+        {
+          "id": "kpop-xmas-kpop-noel-let-it-snow-v1",
+          "title": "KPOP NOEL LET IT SNOW V1",
+          "bpm": null,
+          "key": "",
+          "file": "assets/audio/kpop-xmas/KPOP NOEL LET IT SNOW V1.wav",
+          "price": 300
+        },
+        {
+          "id": "kpop-xmas-kpop-noel-let-it-snow",
+          "title": "KPOP NOEL LET IT SNOW",
+          "bpm": null,
+          "key": "",
+          "file": "assets/audio/kpop-xmas/KPOP NOEL LET IT SNOW.wav",
+          "price": 300
+        },
+        {
+          "id": "kpop-xmas-kpop-noel-oh-xmas-three",
+          "title": "KPOP NOEL OH XMAS THREE",
+          "bpm": null,
+          "key": "",
+          "file": "assets/audio/kpop-xmas/KPOP NOEL OH XMAS THREE.wav",
+          "price": 300
+        },
+        {
+          "id": "kpop-xmas-kpop-noel-xmas-tree-2",
+          "title": "KPOP NOEL XMAS TREE 2",
+          "bpm": null,
+          "key": "",
+          "file": "assets/audio/kpop-xmas/KPOP NOEL XMAS TREE 2.wav",
+          "price": 300
+        },
+        {
+          "id": "kpop-xmas-we-wish-you-a-merry-xmas",
+          "title": "We Wish You a Merry XMAS",
+          "bpm": null,
+          "key": "",
+          "file": "assets/audio/kpop-xmas/We Wish You a Merry XMAS.wav",
+          "price": 300
+        },
+        {
+          "id": "kpop-xmas-we-wish-you-a-merry-xmas-acapella",
+          "title": "We wish you a Merry Xmas  Acapella",
+          "bpm": null,
+          "key": "",
+          "file": "assets/audio/kpop-xmas/We wish you a Merry Xmas  Acapella.wav",
+          "price": 300
+        }
+      ]
+    },
+    {
+      "id": "phonk",
+      "title": "Phonk",
+      "cover": "assets/img/cat-phonk.jpg",
+      "description": "Phonk sombre et club.",
+      "samples": [
+        {
+          "id": "phonk-phonk-iam-a-scatman-v1",
+          "title": "PHONK IAM A SCATMAN V1",
+          "bpm": null,
+          "key": "",
+          "file": "assets/audio/phonk/PHONK IAM A SCATMAN V1.wav",
+          "price": 300
+        },
+        {
+          "id": "phonk-phonk-iam-a-scatman-v2",
+          "title": "PHONK IAM A SCATMAN V2",
+          "bpm": null,
+          "key": "",
+          "file": "assets/audio/phonk/PHONK IAM A SCATMAN V2 .wav",
+          "price": 300
+        },
+        {
+          "id": "phonk-phonk-lalala-lila-la-la-la-v1",
+          "title": "PHONK LALALA LILA LA LA LA V1",
+          "bpm": null,
+          "key": "",
+          "file": "assets/audio/phonk/PHONK LALALA LILA LA LA LA V1 .wav",
+          "price": 300
+        },
+        {
+          "id": "phonk-phonk-lalala-lila-la-la-la-v2",
+          "title": "PHONK LALALA LILA LA LA LA V2",
+          "bpm": null,
+          "key": "",
+          "file": "assets/audio/phonk/PHONK LALALA LILA LA LA LA V2 .wav",
+          "price": 300
+        },
+        {
+          "id": "phonk-phonk-lalala-lila-la-la-la-v3",
+          "title": "PHONK LALALA LILA LA LA LA V3",
+          "bpm": null,
+          "key": "",
+          "file": "assets/audio/phonk/PHONK LALALA LILA LA LA LA V3.wav",
+          "price": 300
+        },
+        {
+          "id": "phonk-phonk-les-demons-de-midi",
+          "title": "PHONK LES DEMONS DE MIDI",
+          "bpm": null,
+          "key": "",
+          "file": "assets/audio/phonk/PHONK LES DEMONS DE MIDI.wav",
+          "price": 300
+        },
+        {
+          "id": "phonk-phonk-so-real-v1",
+          "title": "PHONK SO REAL V1",
+          "bpm": null,
+          "key": "",
+          "file": "assets/audio/phonk/PHONK SO REAL V1.wav",
+          "price": 300
+        },
+        {
+          "id": "phonk-phonk-so-real-v2",
+          "title": "PHONK SO REAL V2",
+          "bpm": null,
+          "key": "",
+          "file": "assets/audio/phonk/PHONK SO REAL V2 .wav",
+          "price": 300
+        },
+        {
+          "id": "phonk-partenaire-particulier-phonk",
+          "title": "Partenaire Particulier Phonk",
+          "bpm": null,
+          "key": "",
+          "file": "assets/audio/phonk/Partenaire Particulier Phonk.wav",
+          "price": 300
+        },
+        {
+          "id": "phonk-this-is-the-riddim-of-the-nigth-phonk",
+          "title": "This is the riddim of the nigth phonk",
+          "bpm": null,
+          "key": "",
+          "file": "assets/audio/phonk/This is the riddim of the nigth phonk.wav",
+          "price": 300
+        },
+        {
+          "id": "phonk-what-is-love-phonk",
+          "title": "What is love phonk",
+          "bpm": null,
+          "key": "",
+          "file": "assets/audio/phonk/What is love phonk.wav",
+          "price": 300
+        }
+      ]
+    },
+    {
+      "id": "pop-fr",
+      "title": "Pop Fr",
+      "cover": "assets/img/cat-pop-fr.jpg",
+      "description": "Pop française moderne.",
+      "samples": [
+        {
+          "id": "pop-fr-9m2-à-paris",
+          "title": "9m2  à Paris",
+          "bpm": null,
+          "key": "",
+          "file": "assets/audio/pop-fr/9m2  à Paris.wav",
+          "price": 300
+        },
+        {
+          "id": "pop-fr-algorythme-dopamine-dans-ma-bulle-2k25",
+          "title": "Algorythme Dopamine (Dans ma bulle 2K25).",
+          "bpm": null,
+          "key": "",
+          "file": "assets/audio/pop-fr/Algorythme Dopamine (Dans ma bulle 2K25)..wav",
+          "price": 300
+        },
+        {
+          "id": "pop-fr-après-midi-banale",
+          "title": "Après midi banale",
+          "bpm": null,
+          "key": "",
+          "file": "assets/audio/pop-fr/Après midi banale.wav",
+          "price": 300
+        },
+        {
+          "id": "pop-fr-ca-vas-mieux",
+          "title": "Ca vas mieux",
+          "bpm": null,
+          "key": "",
+          "file": "assets/audio/pop-fr/Ca vas mieux.wav",
+          "price": 300
+        },
+        {
+          "id": "pop-fr-chanson-fr-desole-tube-facile",
+          "title": "Chanson FR DESOLE TUBE FACILE",
+          "bpm": null,
+          "key": "",
+          "file": "assets/audio/pop-fr/Chanson FR DESOLE TUBE FACILE.wav",
+          "price": 300
+        },
+        {
+          "id": "pop-fr-des-mots-des-mots-damour",
+          "title": "DES MOTS DES MOTS DAMOUR",
+          "bpm": null,
+          "key": "",
+          "file": "assets/audio/pop-fr/DES MOTS DES MOTS DAMOUR.wav",
+          "price": 300
+        },
+        {
+          "id": "pop-fr-dans-le-metro",
+          "title": "Dans le metro",
+          "bpm": null,
+          "key": "",
+          "file": "assets/audio/pop-fr/Dans le metro.wav",
+          "price": 300
+        },
+        {
+          "id": "pop-fr-demarage-à-froid-dans-ma-bulle-2k25",
+          "title": "Demarage à froid(Dans ma bulle 2K25).",
+          "bpm": null,
+          "key": "",
+          "file": "assets/audio/pop-fr/Demarage à froid(Dans ma bulle 2K25)..wav",
+          "price": 300
+        },
+        {
+          "id": "pop-fr-la-prison",
+          "title": "La Prison",
+          "bpm": null,
+          "key": "",
+          "file": "assets/audio/pop-fr/La Prison.wav",
+          "price": 300
+        },
+        {
+          "id": "pop-fr-le-temps-peu-bien-attendre",
+          "title": "Le temps peu bien attendre",
+          "bpm": null,
+          "key": "",
+          "file": "assets/audio/pop-fr/Le temps peu bien attendre.wav",
+          "price": 300
+        },
+        {
+          "id": "pop-fr-les-trente-glorieuses-de-personne-dans-ma-bulle-2k25",
+          "title": "Les Trente Glorieuses de personne (Dans ma bulle 2K25)",
+          "bpm": null,
+          "key": "",
+          "file": "assets/audio/pop-fr/Les Trente Glorieuses de personne (Dans ma bulle 2K25).wav",
+          "price": 300
+        },
+        {
+          "id": "pop-fr-pour-être-honnête",
+          "title": "Pour être honnête",
+          "bpm": null,
+          "key": "",
+          "file": "assets/audio/pop-fr/Pour être honnête.wav",
+          "price": 300
+        },
+        {
+          "id": "pop-fr-rassure-moi",
+          "title": "Rassure moi",
+          "bpm": null,
+          "key": "",
+          "file": "assets/audio/pop-fr/Rassure moi .wav",
+          "price": 300
+        },
+        {
+          "id": "pop-fr-une-journée-au-soleil",
+          "title": "Une journée au soleil",
+          "bpm": null,
+          "key": "",
+          "file": "assets/audio/pop-fr/Une journée au soleil .wav",
+          "price": 300
+        }
+      ]
+    },
+    {
+      "id": "remix-hiphop",
+      "title": "Remix Hiphop",
+      "cover": "assets/img/cat-remix-hiphop.jpg",
+      "description": "Remix hip-hop créatifs.",
+      "samples": [
+        {
+          "id": "remix-hiphop-bad-and-bougies",
+          "title": "Bad and bougies",
+          "bpm": null,
+          "key": "",
+          "file": "assets/audio/remix-hiphop/Bad and bougies.wav",
+          "price": 300
+        },
+        {
+          "id": "remix-hiphop-bodak-yellow-cardi-b-jazzy",
+          "title": "Bodak Yellow Cardi B jazzy",
+          "bpm": null,
+          "key": "",
+          "file": "assets/audio/remix-hiphop/Bodak Yellow Cardi B jazzy .mp3",
+          "price": 300
+        },
+        {
+          "id": "remix-hiphop-dior-pope-smoke-50-s-jazzy",
+          "title": "DIOR Pope Smoke 50' s jazzy",
+          "bpm": null,
+          "key": "",
+          "file": "assets/audio/remix-hiphop/DIOR Pope Smoke 50' s jazzy.mp3",
+          "price": 300
+        },
+        {
+          "id": "remix-hiphop-ice-spyes-remixx",
+          "title": "ICE SPYES REMIXX",
+          "bpm": null,
+          "key": "",
+          "file": "assets/audio/remix-hiphop/ICE SPYES REMIXX.wav",
+          "price": 300
+        },
+        {
+          "id": "remix-hiphop-kanye-stronger-power",
+          "title": "KANYE STRONGER POWER ;;;",
+          "bpm": null,
+          "key": "",
+          "file": "assets/audio/remix-hiphop/KANYE STRONGER POWER ;;; .wav",
+          "price": 300
+        },
+        {
+          "id": "remix-hiphop-many-men",
+          "title": "MANY MEN",
+          "bpm": null,
+          "key": "",
+          "file": "assets/audio/remix-hiphop/MANY MEN .wav",
+          "price": 300
+        },
+        {
+          "id": "remix-hiphop-real-slim-shaddy-50-60-s",
+          "title": "Real Slim shaddy 50  60's",
+          "bpm": null,
+          "key": "",
+          "file": "assets/audio/remix-hiphop/Real Slim shaddy 50 _60's.mp3",
+          "price": 300
+        },
+        {
+          "id": "remix-hiphop-stan-ft-dido-eminem-50",
+          "title": "STAN FT DIDO EMINEM 50",
+          "bpm": null,
+          "key": "",
+          "file": "assets/audio/remix-hiphop/STAN FT DIDO EMINEM 50.wav",
+          "price": 300
+        },
+        {
+          "id": "remix-hiphop-superbasse-nicky-minaj",
+          "title": "SUPERBASSE NICKY MINAJ",
+          "bpm": null,
+          "key": "",
+          "file": "assets/audio/remix-hiphop/SUPERBASSE NICKY MINAJ .wav",
+          "price": 300
+        },
+        {
+          "id": "remix-hiphop-still-dre",
+          "title": "Still Dre",
+          "bpm": null,
+          "key": "",
+          "file": "assets/audio/remix-hiphop/Still Dre.wav",
+          "price": 300
+        },
+        {
+          "id": "remix-hiphop-be-humble",
+          "title": "be humble",
+          "bpm": null,
+          "key": "",
+          "file": "assets/audio/remix-hiphop/be humble.wav",
+          "price": 300
+        },
+        {
+          "id": "remix-hiphop-cardi-b",
+          "title": "cardi b",
+          "bpm": null,
+          "key": "",
+          "file": "assets/audio/remix-hiphop/cardi b.wav",
+          "price": 300
+        },
+        {
+          "id": "remix-hiphop-funky-deluré-anglais",
+          "title": "funky deluré anglais",
+          "bpm": null,
+          "key": "",
+          "file": "assets/audio/remix-hiphop/funky deluré anglais .wav",
+          "price": 300
+        },
+        {
+          "id": "remix-hiphop-kanye-arless",
+          "title": "kanye arless",
+          "bpm": null,
+          "key": "",
+          "file": "assets/audio/remix-hiphop/kanye arless.wav",
+          "price": 300
+        },
+        {
+          "id": "remix-hiphop-knaye-higer",
+          "title": "knaye higer",
+          "bpm": null,
+          "key": "",
+          "file": "assets/audio/remix-hiphop/knaye higer .wav",
+          "price": 300
+        },
+        {
+          "id": "remix-hiphop-migos",
+          "title": "migos",
+          "bpm": null,
+          "key": "",
+          "file": "assets/audio/remix-hiphop/migos.wav",
+          "price": 300
+        }
+      ]
+    },
+    {
+      "id": "tube-fr",
+      "title": "Tube Fr",
+      "cover": "assets/img/cat-tube-fr.jpg",
+      "description": "Tubes français radio-ready.",
+      "samples": [
+        {
+          "id": "tube-fr-ange-ou-demon",
+          "title": "Ange ou Demon",
+          "bpm": null,
+          "key": "",
+          "file": "assets/audio/tube-fr/Ange ou Demon.mp3",
+          "price": 300
+        },
+        {
+          "id": "tube-fr-belené",
+          "title": "Belené",
+          "bpm": null,
+          "key": "",
+          "file": "assets/audio/tube-fr/Belené .wav",
+          "price": 300
+        },
+        {
+          "id": "tube-fr-elle-reviendras-pas",
+          "title": "Elle reviendras pas",
+          "bpm": null,
+          "key": "",
+          "file": "assets/audio/tube-fr/Elle reviendras pas .wav",
+          "price": 300
+        },
+        {
+          "id": "tube-fr-friendzone",
+          "title": "Friendzone",
+          "bpm": null,
+          "key": "",
+          "file": "assets/audio/tube-fr/Friendzone.mp3",
+          "price": 300
+        },
+        {
+          "id": "tube-fr-j-avance-rnb-2",
+          "title": "J'avance RnB 2",
+          "bpm": null,
+          "key": "",
+          "file": "assets/audio/tube-fr/J'avance RnB 2 .wav",
+          "price": 300
+        },
+        {
+          "id": "tube-fr-jbrille-pour-moi",
+          "title": "Jbrille pour moi",
+          "bpm": null,
+          "key": "",
+          "file": "assets/audio/tube-fr/Jbrille pour moi .mp3",
+          "price": 300
+        },
+        {
+          "id": "tube-fr-je-t-appelais-ma-soeur",
+          "title": "Je t'appelais ma soeur",
+          "bpm": null,
+          "key": "",
+          "file": "assets/audio/tube-fr/Je t'appelais ma soeur .wav",
+          "price": 300
+        },
+        {
+          "id": "tube-fr-jme-choisis-mtn",
+          "title": "Jme choisis Mtn",
+          "bpm": null,
+          "key": "",
+          "file": "assets/audio/tube-fr/Jme choisis Mtn.wav",
+          "price": 300
+        },
+        {
+          "id": "tube-fr-on-m-a-dit",
+          "title": "On m'a dit",
+          "bpm": null,
+          "key": "",
+          "file": "assets/audio/tube-fr/On m'a dit .mp3",
+          "price": 300
+        },
+        {
+          "id": "tube-fr-personne-latin-vibe",
+          "title": "Personne latin vibe",
+          "bpm": null,
+          "key": "",
+          "file": "assets/audio/tube-fr/Personne latin vibe.wav",
+          "price": 300
+        },
+        {
+          "id": "tube-fr-reviens-pas",
+          "title": "Reviens Pas",
+          "bpm": null,
+          "key": "",
+          "file": "assets/audio/tube-fr/Reviens Pas.wav",
+          "price": 300
+        },
+        {
+          "id": "tube-fr-tu-es-pas-de-mon-monde-mais-jte-veux-quand-meme",
+          "title": "Tu es pas de mon monde mais jte veux quand meme",
+          "bpm": null,
+          "key": "",
+          "file": "assets/audio/tube-fr/Tu es pas de mon monde mais jte veux quand meme .wav",
+          "price": 300
+        }
+      ]
+    },
+    {
+      "id": "other-vibes",
+      "title": "Other Vibes",
+      "cover": "assets/img/cat-othervibes.jpg",
+      "description": "Vibes expérimentales & bonus tracks.",
+      "samples": [
+        {
+          "id": "other-vibes-belene-corée",
+          "title": "Belene Corée",
+          "bpm": null,
+          "key": "",
+          "file": "assets/audio/Other vibes/Belene Corée.wav",
+          "price": 300
+        },
+        {
+          "id": "other-vibes-make-me-fun",
+          "title": "Make Me Fun",
+          "bpm": null,
+          "key": "",
+          "file": "assets/audio/Other vibes/Make Me Fun.wav",
+          "price": 300
+        },
+        {
+          "id": "other-vibes-mayélé",
+          "title": "Mayélé",
+          "bpm": null,
+          "key": "",
+          "file": "assets/audio/Other vibes/Mayélé.mp3",
+          "price": 300
+        },
+        {
+          "id": "other-vibes-shatta-noel",
+          "title": "Shatta Noel",
+          "bpm": null,
+          "key": "",
+          "file": "assets/audio/Other vibes/Shatta Noel.mp3",
+          "price": 300
+        },
+        {
+          "id": "other-vibes-the-sky",
+          "title": "The sky",
+          "bpm": null,
+          "key": "",
+          "file": "assets/audio/Other vibes/The sky.wav",
+          "price": 300
+        },
+        {
+          "id": "other-vibes-yorouba-habibi",
+          "title": "Yorouba habibi",
+          "bpm": null,
+          "key": "",
+          "file": "assets/audio/Other vibes/Yorouba habibi.wav",
+          "price": 300
+        }
+      ]
+    }
+  ]
+}

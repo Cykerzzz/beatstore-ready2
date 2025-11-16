@@ -21,15 +21,16 @@
       <div id="cards" class="grid"></div>
     </section>
 
-    <section style="margin-top:20px">
-      <a class="card" href="credits.html">
-        <span class="badge">Crédits</span>
-        <img src="assets/img/cover-default.jpg" alt="Crédits">
-        <h4>Acheter des crédits</h4>
-        <p><span data-credits-badge>0</span> disponible(s)</p>
-      </a>
+    <section class="wrap" style="margin-top: 40px;">
+      <h2>Crédits</h2>
+      <p style="opacity:.8;margin-bottom:16px;font-size:14px;">
+        Achète un pack de crédits et débloque instantanément des beats dans tout le catalogue.
+      </p>
+      <div id="credits-list" class="grid cards">
+        <!-- les cartes crédits seront injectées en JS -->
+      </div>
     </section>
-
+    
     <footer class="foot">© 2025 Beatstore — template prêt à l’emploi</footer>
   </div>
 
@@ -48,6 +49,6 @@
       cards.appendChild(el);
     });
   </script>
-  <script src="js/autoload-credits.js" defer></script>
+  <script src="js/credits.js"></script>
 </body>
 </html>
