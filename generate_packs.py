@@ -1,12 +1,12 @@
-#!/usr/bin/env python3
-import json
 from pathlib import Path
+import json
+import unicodedata
 
+# Dossier racine du projet
 ROOT = Path(__file__).parent
-AUDIO_ROOT = ROOT / "assets" / "audio"
 
-# Tous tes packs ici
-PACKS_CONFIG = [
+# Configuration des packs (à adapter si tu changes les covers / descriptions)
+PACK_CONFIGS = [
     {
         "id": "trap",
         "title": "Trap",
@@ -64,58 +64,69 @@ PACKS_CONFIG = [
         "audio_folder": "tube-fr",
     },
     {
-    "id": "other-vibes",
-    "title": "Other Vibes",
-    "cover": "assets/img/cat-othervibes.jpg",
-    "description": "Vibes expérimentales & bonus tracks.",
-    "audio_folder": "Other vibes",
+        "id": "other-vibes",
+        "title": "Other Vibes",
+        "cover": "assets/img/cat-other-vibes.jpg",  # adapte si ton fichier a un autre nom
+        "description": "Vibes expérimentales & bonus tracks.",
+        "audio_folder": "Other vibes",
     },
 ]
 
 
-def filename_to_title(path: Path) -> str:
-    name = path.stem
-    name = name.replace("_", " ").strip()
-    return name
+def slugify(text: str) -> str:
+    """Crée un id propre à partir du titre (sans accents, espaces -> -)."""
+    text = unicodedata.normalize("NFD", text)
+    text = "".join(c for c in text if not unicodedata.combining(c))
+    text = text.lower()
+
+    result = []
+    last_dash = False
+    for c in text:
+        if c.isalnum():
+            result.append(c)
+            last_dash = False
+        else:
+            if not last_dash:
+                result.append("-")
+                last_dash = True
+    slug = "".join(result).strip("-")
+    return slug or "track"
 
 
-def make_sample_id(pack_id: str, path: Path) -> str:
-    base = path.stem.lower()
-    for ch in [" ", "_", "(", ")", ".", ",", ";", "’", "'", "«", "»"]:
-        base = base.replace(ch, "-")
-    while "--" in base:
-        base = base.replace("--", "-")
-    base = base.strip("-")
-    return f"{pack_id}-{base}"
+def filename_to_title(name: str) -> str:
+    """Titre lisible à partir du nom de fichier (sans extension)."""
+    stem = Path(name).stem
+    # tu peux tweaker ça si tu veux garder les tirets
+    return stem.replace("_", " ").replace("-", " ").strip()
 
 
 def build_packs():
     packs = []
 
-    for cfg in PACKS_CONFIG:
-        pack_id = cfg["id"]
-        audio_folder = AUDIO_ROOT / cfg["audio_folder"]
+    for cfg in PACK_CONFIGS:
+        folder = ROOT / "assets" / "audio" / cfg["audio_folder"]
 
-        if not audio_folder.exists():
-            print(f"[WARN] Dossier audio introuvable pour {pack_id}: {audio_folder}")
-            samples = []
-        else:
-            audio_files = list(audio_folder.glob("*.wav")) + list(
-                audio_folder.glob("*.mp3")
-            )
-            audio_files.sort()
+        if not folder.exists():
+            print(f"⚠️  Dossier audio introuvable: {folder}")
+            continue
 
-            samples = []
-            for f in audio_files:
-                sample = {
-                    "id": make_sample_id(pack_id, f),
-                    "title": filename_to_title(f),
-                    "bpm": None,   # à remplir plus tard si tu veux
-                    "key": "",
-                    "file": str((Path("assets") / "audio" / cfg["audio_folder"] / f.name).as_posix()),
-                    "price": 300   # 💸 tous les beats à 300 €
-                }
-                samples.append(sample)
+        audio_files = sorted(folder.glob("*.mp3"))
+
+        samples = []
+        for f in audio_files:
+            title = filename_to_title(f.name)
+            sample_id = f"{cfg['id']}-{slugify(title)}"
+
+            file_path = Path("assets") / "audio" / cfg["audio_folder"] / f.name
+
+            samples.append({
+                "id": sample_id,
+                "title": title,
+                "bpm": None,
+                "key": "",
+                "file": file_path.as_posix(),
+                "price": 300,
+            })
 
         pack_obj = {
             "id": cfg["id"],
@@ -126,16 +137,19 @@ def build_packs():
         }
         packs.append(pack_obj)
 
+        print(f"✅ Pack '{cfg['id']}' : {len(samples)} beats trouvés")
+
     return {"packs": packs}
 
 
 def main():
     data = build_packs()
     out_path = ROOT / "data" / "packs.json"
-    out_path.parent.mkdir(parents=True, exist_ok=True)
-    with out_path.open("w", encoding="utf-8") as f:
-        json.dump(data, f, ensure_ascii=False, indent=2)
-    print(f"✅ packs.json généré avec succès ({out_path})")
+    out_path.write_text(
+        json.dumps(data, ensure_ascii=False, indent=2),
+        encoding="utf-8",
+    )
+    print(f"\n💾 Fichier généré : {out_path.relative_to(ROOT)}")
 
 
 if __name__ == "__main__":
