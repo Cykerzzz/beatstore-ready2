@@ -71,19 +71,11 @@
           "price": 300
         },
         {
-          "id": "afro-fr-coréen-afro-imasitumo",
+          "id": "afro-fr-coreen-afro-imasitumo",
           "title": "Coréen Afro Imasitumo",
           "bpm": null,
           "key": "",
           "file": "assets/audio/afro-fr/Coréen Afro Imasitumo.mp3",
-          "price": 300
-        },
-        {
-          "id": "afro-fr-drama-queen",
-          "title": "DRAMA QUEEN",
-          "bpm": null,
-          "key": "",
-          "file": "assets/audio/afro-fr/DRAMA QUEEN.mp3",
           "price": 300
         },
         {
@@ -103,6 +95,14 @@
           "price": 300
         },
         {
+          "id": "afro-fr-drama-queen",
+          "title": "Drama Queen",
+          "bpm": null,
+          "key": "",
+          "file": "assets/audio/afro-fr/Drama Queen.mp3",
+          "price": 300
+        },
+        {
           "id": "afro-fr-encore-encore-encore",
           "title": "Encore Encore Encore",
           "bpm": null,
@@ -111,7 +111,7 @@
           "price": 300
         },
         {
-          "id": "afro-fr-j-arrivais-pas-à-partir",
+          "id": "afro-fr-j-arrivais-pas-a-partir",
           "title": "J'arrivais pas à partir",
           "bpm": null,
           "key": "",
@@ -344,7 +344,7 @@
       "samples": [
         {
           "id": "kpop-xmas-kpop-all-i-want-for-christmas-is-you-v2",
-          "title": "KPOP - All I Want for Christmas Is You  V2",
+          "title": "KPOP   All I Want for Christmas Is You  V2",
           "bpm": null,
           "key": "",
           "file": "assets/audio/kpop-xmas/KPOP - All I Want for Christmas Is You  V2.mp3",
@@ -352,7 +352,7 @@
         },
         {
           "id": "kpop-xmas-kpop-all-i-want-for-christmas-is-you",
-          "title": "KPOP - All I Want for Christmas Is You",
+          "title": "KPOP   All I Want for Christmas Is You",
           "bpm": null,
           "key": "",
           "file": "assets/audio/kpop-xmas/KPOP - All I Want for Christmas Is You .mp3",
@@ -495,15 +495,7 @@
       "description": "Pop française moderne.",
       "samples": [
         {
-          "id": "pop-fr-77-9s-recording-nov-8-@-11-29-am-cover",
-          "title": "77.9s Recording (Nov 8 @ 11 29 AM) (Cover)",
-          "bpm": null,
-          "key": "",
-          "file": "assets/audio/pop-fr/77.9s Recording (Nov 8 @ 11_29 AM) (Cover).mp3",
-          "price": 300
-        },
-        {
-          "id": "pop-fr-9m2-à-paris",
+          "id": "pop-fr-9m2-a-paris",
           "title": "9m2  à Paris",
           "bpm": null,
           "key": "",
@@ -519,7 +511,7 @@
           "price": 300
         },
         {
-          "id": "pop-fr-après-midi-banale",
+          "id": "pop-fr-apres-midi-banale",
           "title": "Après midi banale",
           "bpm": null,
           "key": "",
@@ -559,7 +551,7 @@
           "price": 300
         },
         {
-          "id": "pop-fr-demarage-à-froid-dans-ma-bulle-2k25",
+          "id": "pop-fr-demarage-a-froid-dans-ma-bulle-2k25",
           "title": "Demarage à froid(Dans ma bulle 2K25).",
           "bpm": null,
           "key": "",
@@ -591,7 +583,7 @@
           "price": 300
         },
         {
-          "id": "pop-fr-pour-être-honnête",
+          "id": "pop-fr-pour-etre-honnete",
           "title": "Pour être honnête",
           "bpm": null,
           "key": "",
@@ -607,7 +599,7 @@
           "price": 300
         },
         {
-          "id": "pop-fr-une-journée-au-soleil",
+          "id": "pop-fr-une-journee-au-soleil",
           "title": "Une journée au soleil",
           "bpm": null,
           "key": "",
@@ -648,10 +640,10 @@
         },
         {
           "id": "remix-hiphop-kanye-stronger-power",
-          "title": "KANYE STRONGER POWER ;;;",
+          "title": "KANYE STRONGER POWER",
           "bpm": null,
           "key": "",
-          "file": "assets/audio/remix-hiphop/KANYE STRONGER POWER ;;; .mp3",
+          "file": "assets/audio/remix-hiphop/KANYE STRONGER POWER.mp3",
           "price": 300
         },
         {
@@ -695,14 +687,6 @@
           "price": 300
         },
         {
-          "id": "remix-hiphop-funky-deluré-anglais",
-          "title": "funky deluré anglais",
-          "bpm": null,
-          "key": "",
-          "file": "assets/audio/remix-hiphop/funky deluré anglais .mp3",
-          "price": 300
-        },
-        {
           "id": "remix-hiphop-kanye-arless",
           "title": "kanye arless",
           "bpm": null,
@@ -743,11 +727,11 @@
           "price": 300
         },
         {
-          "id": "tube-fr-belené",
-          "title": "Belené",
+          "id": "tube-fr-belene",
+          "title": "Belene",
           "bpm": null,
           "key": "",
-          "file": "assets/audio/tube-fr/Belené .mp3",
+          "file": "assets/audio/tube-fr/Belene .mp3",
           "price": 300
         },
         {
@@ -767,11 +751,11 @@
           "price": 300
         },
         {
-          "id": "tube-fr-j-avance-rnb-2",
-          "title": "J'avance RnB 2",
+          "id": "tube-fr-j-avance-solo",
+          "title": "J'avance Solo",
           "bpm": null,
           "key": "",
-          "file": "assets/audio/tube-fr/J'avance RnB 2 .mp3",
+          "file": "assets/audio/tube-fr/J'avance Solo.mp3",
           "price": 300
         },
         {
@@ -835,11 +819,11 @@
     {
       "id": "other-vibes",
       "title": "Other Vibes",
-      "cover": "assets/img/cat-othervibes.jpg",
+      "cover": "assets/img/cat-other-vibes.jpg",
       "description": "Vibes expérimentales & bonus tracks.",
       "samples": [
         {
-          "id": "other-vibes-belene-corée",
+          "id": "other-vibes-belene-coree",
           "title": "Belene Corée",
           "bpm": null,
           "key": "",
@@ -855,7 +839,7 @@
           "price": 300
         },
         {
-          "id": "other-vibes-mayélé",
+          "id": "other-vibes-mayele",
           "title": "Mayélé",
           "bpm": null,
           "key": "",
