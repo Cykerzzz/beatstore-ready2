@@ -823,7 +823,7 @@
       "description": "Vibes expérimentales & bonus tracks.",
       "samples": [
         {
-          "id": "other-vibes-belene-coree",
+          "id": "other-belene-coree",
           "title": "Belene Corée",
           "bpm": null,
           "key": "",
@@ -831,7 +831,7 @@
           "price": 300
         },
         {
-          "id": "other-vibes-make-me-fun",
+          "id": "other-make-me-fun",
           "title": "Make Me Fun",
           "bpm": null,
           "key": "",
@@ -845,9 +845,9 @@
           "key": "",
           "file": "assets/audio/Other vibes/Mayele.mp3",
           "price": 300
-        }
+        },
         {
-          "id": "other-vibes-shatta-noel",
+          "id": "other-shatta-noel",
           "title": "Shatta Noel",
           "bpm": null,
           "key": "",
@@ -855,7 +855,7 @@
           "price": 300
         },
         {
-          "id": "other-vibes-the-sky",
+          "id": "other-the-sky",
           "title": "The sky",
           "bpm": null,
           "key": "",
@@ -863,7 +863,7 @@
           "price": 300
         },
         {
-          "id": "other-vibes-vibes-on-vibes",
+          "id": "other-vibes-on-vibes",
           "title": "Vibes on vibes",
           "bpm": null,
           "key": "",
@@ -871,7 +871,7 @@
           "price": 300
         },
         {
-          "id": "other-vibes-yalla-gnawa-afro-house",
+          "id": "other-yalla-gnawa-afro-house",
           "title": "Yalla Gnawa Afro house",
           "bpm": null,
           "key": "",
@@ -879,7 +879,7 @@
           "price": 300
         },
         {
-          "id": "other-vibes-yorouba-habibi",
+          "id": "other-yorouba-habibi",
           "title": "Yorouba habibi",
           "bpm": null,
           "key": "",
@@ -887,6 +887,3 @@
           "price": 300
         }
       ]
-    }
-  ]
-}
